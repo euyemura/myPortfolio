@@ -7,7 +7,16 @@ for all projects.
 
 - A real time chat engine
 - A visualization of my skills.
-- A fun blog. 
+- A fun blog.
+
+```javascript
+console.log("Hello World!")
+```
+```ruby
+def code_snippets
+  puts "this is an example of code snippets in markdown"
+end
+```
 
 * Ruby version
 
