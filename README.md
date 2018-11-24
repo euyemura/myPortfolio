@@ -1,9 +1,13 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+> This is the beginning of my portfolio site, it'll be a blog as well as a host
+for all projects.
 
-Things you may want to cover:
+### Features
+
+- A real time chat engine
+- A visualization of my skills.
+- A fun blog. 
 
 * Ruby version
 
