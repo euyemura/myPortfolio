@@ -1,5 +1,7 @@
 <h1>My portfolios!</h1>
 
+<!-- <a href="new">Create a New Portfolio Item</a> -->
+<%= link_to "Create a New Portfolio Item!", new_portfolio_path %>
 <%# so basically you write each line of ruby code inside of its own enbedded ruby %>
 <% @portfolio_items.each do |portfolio_item| %>
   <p><%= portfolio_item.title %></p>
