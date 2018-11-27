@@ -1,0 +1,9 @@
+<h1>My portfolios!</h1>
+
+<%# so basically you write each line of ruby code inside of its own enbedded ruby %>
+<% @portfolio_items.each do |portfolio_item| %>
+  <p><%= portfolio_item.title %></p>
+  <p><%= portfolio_item.subtitle %></p>
+  <p><%= portfolio_item.body %></p>
+  <%= image_tag portfolio_item.thumb_image %>
+<% end %>

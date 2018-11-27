@@ -21,9 +21,9 @@ puts "5 skills generated"
     title: "Portfolio #{portfolio}",
     subtitle: "My great service",
     body: "Do an almighty painting with us. You've got to learn to fight the temptation to resist these things. Just let them happen. Be careful. You can always add more - but you can't take it away.",
-    main_image: "https://placeholder.com/350",
-    thumb_image: "https://placeholder.com/140"
+    main_image: "https://placeimg.com/600/400/nature",
+    thumb_image: "https://placeimg.com/150/100/nature"
   )
-end 
+end
 
 puts "9 portfolio items created"
