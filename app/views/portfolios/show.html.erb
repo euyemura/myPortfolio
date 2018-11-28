@@ -1,0 +1,21 @@
+
+<h1>Title:
+  <%= @portfolio_item.title %>
+</h1>
+
+<%= image_tag @portfolio_item.main_image unless @portfolio_item.main_image.nil? %>
+
+<em>
+  <h3>
+  <%= @portfolio_item.subtitle %>
+  </h3>
+</em>
+
+<p>
+  <%= @portfolio_item.body %>
+</p>
+
+<br>
+
+<%= link_to 'Edit', edit_portfolio_path(@portfolio_item) %> |
+<%= link_to 'Back', portfolios_path %>
