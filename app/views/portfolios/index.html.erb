@@ -8,4 +8,7 @@
   <p><%= portfolio_item.subtitle %></p>
   <p><%= portfolio_item.body %></p>
   <%= image_tag portfolio_item.thumb_image unless portfolio_item.thumb_image.nil? %>
+  <%= link_to "Edit this portfolio", edit_portfolio_url(portfolio_item.id) %>
+  <%# The thing I dont understand about this is still, how does it know that it is looking for not only the specific blog, which is easy cuz we're just mapping over the entire array of blogs, but how does it know to find the blog with the specific id, is that just rails magic? %>
+  <a href="/portfolios/<%=portfolio_item.id%>/edit">edit2</a>
 <% end %>
