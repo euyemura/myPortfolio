@@ -44,4 +44,15 @@ class PortfoliosController < ApplicationController
     end
   end
 
+  def destroy
+    # need to add more comments, this passes a portfolio item to the method, that item is targeted to be destroyed.  usually, it isn't defined in the method, but in a private method that is set in the before action, this is to make sure we arent typing the same code over and over again.
+    @portfolio_item = Portfolio.find(params[:id])
+    @portfolio_item.destroy
+    # And then we are actually going to redirect the page, only after destroy occurs, so it responds to it being destroyed.
+    respond_to do |format|
+      format.html { redirect_to portfolios_url, notice: 'Portfolio item was successfully deleted.' }
+      # format.json { head :no_content }
+    end
+  end
+
 end

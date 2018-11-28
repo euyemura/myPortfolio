@@ -13,6 +13,8 @@
   <br>
   <%= link_to "Show the portfolio", portfolio_path(portfolio_item.id) %>
   <%= link_to "Edit this portfolio", edit_portfolio_url(portfolio_item.id) %>
+  <%= link_to 'Delete Portfolio', portfolio_path(portfolio_item.id), method: :delete, data: { confirm: 'Are you sure?' } %>
+  <%# If you look at this path for destroy, its the same path as the show page, but its a different action, because we're performing the delete method, i mean, shouldnt it say destroy though? %>
   <%# The thing I dont understand about this is still, how does it know that it is looking for not only the specific blog, which is easy cuz we're just mapping over the entire array of blogs, but how does it know to find the blog with the specific id, is that just rails magic? %>
   <%# <a href="/portfolios/<%=portfolio_item.id%><%#/edit">edit2</a> %>
   <hr>
