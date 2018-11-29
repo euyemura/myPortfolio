@@ -1,6 +1,6 @@
 10.times do |blog|
   Blog.create!(
-    title: "Blog.#{blog}",
+    title: "Blog #{blog}",
     body: "Everyone wants to enjoy the good parts - but you have to build the framework first. Give him a friend, we forget the trees get lonely too. If you didn't have baby clouds, you wouldn't have big clouds. We'll take a little bit of Van Dyke Brown. Let's build some happy little clouds up here. Almost everything is going to happen for you automatically - you don't have to spend any time working or worrying."
   )
 end
