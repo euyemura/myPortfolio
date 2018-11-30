@@ -1,5 +1,5 @@
 class BlogsController < ApplicationController
-  before_action :set_blog, only: [:show, :edit, :update, :destroy]
+  before_action :set_blog, only: [:show, :edit, :update, :destroy, :toggle_status]
 
   # GET /blogs
   # GET /blogs.json
@@ -19,6 +19,12 @@ class BlogsController < ApplicationController
 
   # GET /blogs/1/edit
   def edit
+  end
+
+  def toggle_status
+    (@blog.draft?) ? @blog.published! : @blog.draft!
+
+    redirect_to blogs_url, notice: 'Post status was updated!'
   end
 
   # POST /blogs
@@ -64,7 +70,7 @@ class BlogsController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_blog
-      @blog = Blog.find(params[:id])
+      @blog = Blog.friendly.find(params[:id])
       #say you had changed params[:id] to 1, then no matter wht you clicked on, it would always show 1.
     end
 
