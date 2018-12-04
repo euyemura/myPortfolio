@@ -7,4 +7,15 @@ class Portfolio < ApplicationRecord
   end
 
   scope :rails_magic, -> { where(subtitle: "Ruby on Rails")}
+  #above are the two ways to add custom scoping to your model, ou do it in the model
+
+  after_initialize :set_defaults
+  #here were saying that after initilization, but before creation, we are going to set some default values, specifically for the thumb and the main images.
+
+  def set_defaults
+    self.main_image ||= "https://placeimg.com/600/400/nature"
+    self.thumb_image ||= "https://placeimg.com/150/100/nature"
+  end
+
+
 end
