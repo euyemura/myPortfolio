@@ -1,19 +1,13 @@
-<h1>My portfolios!</h1>
+<h1>My Rails portfolios!</h1>
 
 <!-- <a href="new">Create a New Portfolio Item</a> -->
 <%= link_to "Create a New Portfolio Item!", new_portfolio_path %>
 <%# so basically you write each line of ruby code inside of its own enbedded ruby %>
-<% @portfolio_items.each do |portfolio_item| %>
+<% @rails_portfolio_items.each do |portfolio_item| %>
   <h3>
     <%= link_to portfolio_item.title, portfolio_show_path(portfolio_item.id) %>
   </h3>
   <p><%= portfolio_item.subtitle %></p>
-  <p>
-    <%=  "Technologies: #{portfolio_item.technologies[0].name},
-      #{portfolio_item.technologies[1].name}, 
-      #{portfolio_item.technologies[2].name}" if portfolio_item.technologies.count == 3
-    %>
-  </p>
   <p><%= portfolio_item.body %></p>
   <%= image_tag portfolio_item.thumb_image unless portfolio_item.thumb_image.nil? %>
   <br>

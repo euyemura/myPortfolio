@@ -3,8 +3,19 @@ class PortfoliosController < ApplicationController
     @portfolio_items = Portfolio.all
   end
 
+  def angular
+    @angular_portfolio_items = Portfolio.angular
+  end
+
+  def rails
+    @rails_portfolio_items = Portfolio.rails_magic
+  end
+
   def new
     @portfolio_item = Portfolio.new
+    # remember this is the part where we are instantiating the portfolio form, so check this out.
+    # but now we need to make sure there is a spot for these, or that tecnologies_attributes are whitelisted in order to allow you to build a technology.
+    3.times { @portfolio_item.technologies.build }
   end
 
   def show
@@ -14,7 +25,7 @@ class PortfoliosController < ApplicationController
   # so i got confused, i thought that we were sending this portfolio item to the index.html.erb page and specifically to be the parameter of the link_to method, however, thats not true, the index link_to method is simply using routes as well as the specific id of the portfolio item thats being mapped over to send the user to the right url, however, when the user gets to that url, we have to show him the correct portfolio, this is why, with the link_to, you put in a parameter of the id of the portfolio item, this puts it inside of the params of the url, so now rails has the specific portfolio, which it finds by saying Portfolio.find(params[:id]) and then sending it to the actual show page. cool stuff right?
 
   def create
-    @portfolio_item = Portfolio.new(params.require(:portfolio).permit(:title, :subtitle, :body))
+    @portfolio_item = Portfolio.new(params.require(:portfolio).permit(:title, :subtitle, :body, technologies_attributes: [:name]))
 
     respond_to do |format|
       if @portfolio_item.save
