@@ -19,7 +19,10 @@
       <%= link_to 'Login', new_user_session_path %>
       <p>Please sign in or register to continue, apparently you can just put a p tag somewhere before the end keyword and it'll show up dynamically.</p>
     <% end %>
-
     <%= yield %>
+
+    <% if session[:source] %>
+    <p>Thanks for visiting from <%= session[:source] %>!</p>
+    <% end %>
   </body>
 </html>
