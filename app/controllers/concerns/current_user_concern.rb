@@ -1,10 +1,6 @@
 module CurrentUserConcern
   extend ActiveSupport::Concern
 
-  included do
-    before_action :current_user
-  end
-
   def current_user
     super || guest_user
   end
