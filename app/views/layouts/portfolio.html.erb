@@ -15,6 +15,7 @@
     <p class="alert"><%= alert %></p>
 
 
+    <%= render "shared/nav", location: 'top' %>
 
     <% if current_user.is_a?(User) %>
       <%= link_to 'Logout', destroy_user_session_path, method: :delete %>
@@ -24,7 +25,6 @@
       <p>Please sign in or register to continue, apparently you can just put a p tag somewhere before the end keyword and it'll show up dynamically.</p>
     <% end %>
     <%= yield %>
-    <%= render "shared/nav" %>
 
     <% if session[:source] %>
     <p>Thanks for visiting from <%= session[:source] %>!</p>
