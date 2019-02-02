@@ -15,9 +15,16 @@ body {
   .top a:hover {
     }
 
-
-
-
 .top div {
   display: inline-block
+}
+
+.my-special-class {
+  border: 1px solid white;
+  color: orange;
+}
+
+.my-class {
+  border: 1px solid white;
+  color: blue;
 }

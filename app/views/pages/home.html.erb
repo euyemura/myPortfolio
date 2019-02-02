@@ -7,3 +7,13 @@
 <h2>Skills</h2>
 <%= @skills.inspect %>
 <%# object shows the object for whaqt its worth, just everything about it %>
+
+<hr>
+
+<%= content_tag :p, class: "my-special-class" do %>
+HELLO WORLD!
+<% end %>
+
+<hr>
+
+<%= sample_helper("my-class") %>

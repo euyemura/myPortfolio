@@ -11,4 +11,15 @@ module ApplicationHelper
   end
 
 
+  def sample_helper(class_name)
+    content_tag :div, "my awesome content", class: class_name
+  end
+
+  def source_helper(layout_name)
+    if session[:source]
+      greeting = "Thanks for visiting from #{session[:source]} and you are on the #{layout_name} layout!"
+      content_tag(:div, greeting, class: "source-greeting")
+    end
+  end
+
 end
