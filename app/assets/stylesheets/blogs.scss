@@ -27,5 +27,20 @@ body {
   div {
     display: inline-block
   }
+}
 
+a {
+  border: 1px solid white;
+  padding: 5px 5px;
+  list-style-type: none;
+  text-decoration: none;
+  color: white;
+  display: inline-block;
+
+  &:hover {
+    background-color: lighten(purple, 20%)
+  }
+  &:link {
+    text-decoration: none;
+  }
 }
