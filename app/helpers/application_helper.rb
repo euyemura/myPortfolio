@@ -22,4 +22,8 @@ module ApplicationHelper
     end
   end
 
+  def copyright_generator
+    AkioViewTool::Renderer.copyright "Eric Uyemura", "All rights reserved"
+  end 
+
 end

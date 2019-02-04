@@ -1,3 +1,9 @@
+GIT
+  remote: https://github.com/euyemura/akio_view_tool
+  revision: ab49c3ec07977ff7271f5d7996775b2a0d015f2b
+  specs:
+    akio_view_tool (0.1.0)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -210,6 +216,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  akio_view_tool!
   bootsnap (>= 1.1.0)
   bootstrap (~> 4.2.1)
   byebug

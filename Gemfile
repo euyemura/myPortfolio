@@ -62,3 +62,5 @@ gem 'devise', '~> 4.5'
 gem 'bootstrap', '~> 4.2.1'
 
 gem 'jquery-rails'
+
+gem 'akio_view_tool', git: "https://github.com/euyemura/akio_view_tool"
