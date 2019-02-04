@@ -1,4 +1,5 @@
 class PortfoliosController < ApplicationController
+  before_action :set_portfolio_item, only: [:edit, :update, :show, :destroy]
   layout "portfolio"
   def index
     @portfolio_items = Portfolio.all
@@ -20,7 +21,6 @@ class PortfoliosController < ApplicationController
   end
 
   def show
-    @portfolio_item = Portfolio.find(params[:id])
   end
 
   # so i got confused, i thought that we were sending this portfolio item to the index.html.erb page and specifically to be the parameter of the link_to method, however, thats not true, the index link_to method is simply using routes as well as the specific id of the portfolio item thats being mapped over to send the user to the right url, however, when the user gets to that url, we have to show him the correct portfolio, this is why, with the link_to, you put in a parameter of the id of the portfolio item, this puts it inside of the params of the url, so now rails has the specific portfolio, which it finds by saying Portfolio.find(params[:id]) and then sending it to the actual show page. cool stuff right?
@@ -40,11 +40,9 @@ class PortfoliosController < ApplicationController
   end
 
   def edit
-    @portfolio_item = Portfolio.find(params[:id])
   end
 
   def update
-    @portfolio_item = Portfolio.find(params[:id])
     respond_to do |format|
       if @portfolio_item.update(portfolio_params)
         format.html { redirect_to portfolios_path, notice: 'Portfolio item was successfully updated.' }
@@ -58,7 +56,6 @@ class PortfoliosController < ApplicationController
 
   def destroy
     # need to add more comments, this passes a portfolio item to the method, that item is targeted to be destroyed.  usually, it isn't defined in the method, but in a private method that is set in the before action, this is to make sure we arent typing the same code over and over again.
-    @portfolio_item = Portfolio.find(params[:id])
     @portfolio_item.destroy
     # And then we are actually going to redirect the page, only after destroy occurs, so it responds to it being destroyed.
     respond_to do |format|
@@ -74,6 +71,10 @@ private
                                       :body,
                                       technologies_attributes: [:name]
                                     )
+  end
+
+  def set_portfolio_item
+    @portfolio_item = Portfolio.find(params[:id])
   end
 
 end
