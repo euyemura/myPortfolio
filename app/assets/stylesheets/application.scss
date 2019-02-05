@@ -147,7 +147,6 @@ body {
       padding: 10px 10px;
     }
   }
-
   .col-md-4 {
     text-align: center;
   }
@@ -168,6 +167,18 @@ body {
       position: relative;
       right: 30px;
     }
+  }
+}
+.card__login {
+  width: 22rem;
+  padding: 10px;
+  margin-left: auto;
+  margin-right: auto;
+
+  &--buttons {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
   }
 }
 
