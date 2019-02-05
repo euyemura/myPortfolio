@@ -10,7 +10,7 @@
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
-  <body">
+  <body>
 
     <div class="site-wrapper">
 
@@ -19,12 +19,11 @@
         <div class="cover-container">
 
           <%= render "shared/application_nav" %>
-          <%= login_helper %>
+
           <%= yield %>
 
           <%= source_helper("application") %>
-          <%= copyright_generator %>
-
+          <%= render "shared/application_footer" %>
         </div>
 
       </div>
