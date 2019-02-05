@@ -131,11 +131,14 @@ body {
  */
 
 
-.card__edit {
-  transform: scale(.8);
+.card {
+  // transform: scale(.8);
   background-color: #CCC;
   .auth-links {
     color: #333;
+  }
+  .auth-links--back {
+    margin-top: 10px;
   }
   .card-block {
     color: #333;
@@ -148,9 +151,25 @@ body {
   .col-md-4 {
     text-align: center;
   }
-
 }
 
+.card__edit {
+  transform: scale(.8);
+}
+.card__new {
+  padding: 10px;
+  .card__new--buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 0px;
+
+    div {
+      position: relative;
+      right: 30px;
+    }
+  }
+}
 
 @media (min-width: 40em) {
   /* Pull out the header and footer */
