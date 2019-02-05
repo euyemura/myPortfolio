@@ -127,8 +127,30 @@ body {
 
 
 /*
- * Affix and center
+ *custom styles
  */
+
+
+.card__edit {
+  transform: scale(.8);
+  background-color: #CCC;
+  .auth-links {
+    color: #333;
+  }
+  .card-block {
+    color: #333;
+    text-align: left;
+    .row {
+      padding: 10px 10px;
+    }
+  }
+
+  .col-md-4 {
+    text-align: center;
+  }
+
+}
+
 
 @media (min-width: 40em) {
   /* Pull out the header and footer */
