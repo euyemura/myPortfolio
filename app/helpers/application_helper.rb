@@ -25,4 +25,12 @@ module ApplicationHelper
     AkioViewTool::Renderer.copyright "Eric Uyemura", "All rights reserved"
   end
 
+  def portfolio_footer_helper
+    if params[:action] == "show"
+      link_to 'Back to portfolios', portfolios_path
+    else
+      content_tag :a, "Back to top", href: "#"
+    end
+  end
+
 end
