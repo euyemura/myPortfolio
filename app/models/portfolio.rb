@@ -1,6 +1,6 @@
 class Portfolio < ApplicationRecord
   has_many :technologies
-  # the below line pretty much sets everything up, but we still need to do some data validation type stuff, like making sure someone actually connects a technology to a portfolio. 
+  # the below line pretty much sets everything up, but we still need to do some data validation type stuff, like making sure someone actually connects a technology to a portfolio.
   accepts_nested_attributes_for :technologies,
                                 reject_if: lambda { |attrs| attrs['name'].blank? }
   include Placeholder
@@ -21,6 +21,10 @@ class Portfolio < ApplicationRecord
     self.main_image ||= "https://placeimg.com/600/400/nature"
     self.thumb_image ||= Placeholder.image_generator(width: 150, height: 100)
   end
+
+  def self.by_position
+    order("position ASC")
+  end 
 
 
 end
