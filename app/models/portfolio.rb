@@ -6,6 +6,9 @@ class Portfolio < ApplicationRecord
   include Placeholder
   validates_presence_of :title, :body, :main_image, :thumb_image
 
+  mount_uploader :thumb_image, PortfolioUploader
+  mount_uploader :main_image, PortfolioUploader
+
   def self.angular
     where(subtitle: "Angular")
     #this creates a custom method, or scope, where if you use the .angular on its self, meaning, the Portfolio database, then it'll use this custom parameter, thats so awesomse.
@@ -24,7 +27,7 @@ class Portfolio < ApplicationRecord
 
   def self.by_position
     order("position ASC")
-  end 
+  end
 
 
 end

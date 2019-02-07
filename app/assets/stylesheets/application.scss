@@ -145,7 +145,7 @@ body {
   color: rgba(255, 204, 153, .7) !important;
   border-bottom-color: rgba(255, 204, 153, .7) !important;
 }
-#background {
+#background, #background-video {
   position: fixed;
   top: 50%;
   left: 50%;
@@ -156,8 +156,18 @@ body {
   z-index: -100;
   -webkit-transform: translateX(-50%) translateY(-50%);
   transform: translateX(-50%) translateY(-50%);
-  background: image-url('astronomy.jpg') no-repeat;
+  background: image-url('coffee-screen.png') no-repeat;
   background-size: cover;
+  background-position: center;
+}
+#background-video {
+  display: none;
+}
+
+@media screen and (min-width: 1000px) {
+  #background-video {
+    display: block;
+  }
 }
 
 .card {
