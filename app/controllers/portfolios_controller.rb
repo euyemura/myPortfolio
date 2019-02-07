@@ -26,7 +26,6 @@ class PortfoliosController < ApplicationController
     @portfolio_item = Portfolio.new
     # remember this is the part where we are instantiating the portfolio form, so check this out.
     # but now we need to make sure there is a spot for these, or that tecnologies_attributes are whitelisted in order to allow you to build a technology.
-    3.times { @portfolio_item.technologies.build }
   end
 
   def show
@@ -80,7 +79,7 @@ private
                                       :body,
                                       :main_image,
                                       :thumb_image,
-                                      technologies_attributes: [:name]
+                                      technologies_attributes: [:id, :name, :_destroy]
                                     )
   end
 

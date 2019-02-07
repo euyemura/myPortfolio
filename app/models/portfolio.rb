@@ -2,6 +2,7 @@ class Portfolio < ApplicationRecord
   has_many :technologies
   # the below line pretty much sets everything up, but we still need to do some data validation type stuff, like making sure someone actually connects a technology to a portfolio.
   accepts_nested_attributes_for :technologies,
+                                allow_destroy: true,
                                 reject_if: lambda { |attrs| attrs['name'].blank? }
 
   validates_presence_of :title, :body

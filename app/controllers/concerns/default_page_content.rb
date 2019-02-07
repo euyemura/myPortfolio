@@ -6,7 +6,7 @@ module DefaultPageContent
     before_action :set_page_defaults
   end
 
-  def set_page_defaults
+  def set_page_defaults 
     @page_title = "Eric Akio Uyemura | Portfolio"
     @seo_keywords = "Eric Uyemura portfolio"
   end
