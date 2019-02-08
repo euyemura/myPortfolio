@@ -17,9 +17,8 @@
     <%= render "shared/portfolio_masthead" unless logged_in?(:site_admin)%>
 
     <%= yield %>
-    <!-- start of footer  -->
     <%= render "shared/portfolio_footer" %>
-    <!-- end of footer  -->
+    <%= alert %>
     <%= source_helper("portfolio") %>
   </body>
 </html>

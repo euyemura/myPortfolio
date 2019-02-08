@@ -62,13 +62,26 @@ module ApplicationHelper
   def nav_helper(class_name, tag_type)
     nav_links = ''
     nav_items.each do |item|
-      nav_links << "<#{tag_type}><a href='#{item[:url]}' class='#{class_name} #{active? item[:url]}'>#{item[:title]}</a></#{tag_type}>"
+      nav_links << "<#{tag_type}><a href='#{item[:url]}' class='#{class_name} #{active?(item[:url], request.path)}'>#{item[:title]}</a></#{tag_type}>"
     end
     nav_links.html_safe
   end
 
-  def active? path
-    "active" if current_page? path
+  def active? path, request
+    if current_page? path || request.include?(path)
+      "active"
+    end
+  end
+
+
+  def alert error = nil
+    alert = (flash[:alert] || flash[:notice] || flash[:error])
+
+    if alert
+      js add_gritter(alert, image: image_url("yoshi.png"), sticky: false, time: 3000)
+    elsif error
+      js add_gritter(error, image: image_url("yoshi.png"), sticky: false, time: 3000)
+    end
   end
 
 end

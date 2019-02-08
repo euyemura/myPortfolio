@@ -8,7 +8,6 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= stylesheet_link_tag    'home-page', media: 'all', 'data-turbolinks-track': 'reload' if params[:action] == "home"%>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
@@ -31,7 +30,7 @@
             )
             %>
           <%= render "shared/application_nav" %>
-          <%= render "shared/alerts" %>
+          <%= alert %>
 
 
           <%= yield %>

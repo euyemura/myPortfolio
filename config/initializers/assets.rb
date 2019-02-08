@@ -16,5 +16,5 @@ Rails.application.config.assets.paths << Rails.root.join('node_modules')
 Rails.application.config.assets.precompile += %w( blogs.css )
 
 Rails.application.config.assets.precompile += %w( portfolios.css )
-Rails.application.config.assets.precompile += %w( home-page.css )
+
 Rails.application.config.assets.paths << "#{Rails.root}/app/assets/videos"
