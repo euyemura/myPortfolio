@@ -1,6 +1,5 @@
 module PagesHelper
   def twitter_parser tweet
-    tweet = "ProcessCivil: RT @911well: Integrity is everything .. #happiness #integrity #honesty #trust #mindfulness https://t.co/vlgGnmDDUt"
     regex= %r{
         \b
         (
