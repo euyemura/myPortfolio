@@ -6,6 +6,9 @@
  * Globals
  */
 
+$beige-color: #FFCC99;
+$blue-color: #4286F4;
+
 /* Links */
 a,
 a:focus,
@@ -131,8 +134,9 @@ body {
 /*
  *custom styles
  */
+
 .header-container {
-  background-color: rgba(255, 204, 153, 0.3);
+  background-color: rgba(255, 204, 153, 0.5);
   position: absolute;
   top: 35%;
   /* right: 40%; */
@@ -143,8 +147,23 @@ body {
 }
 
 .active {
-  color: rgba(255, 204, 153, .7) !important;
-  border-bottom-color: rgba(255, 204, 153, .7) !important;
+  color: rgba($beige-color, .7) !important;
+  border-bottom-color: rgba($beige-color, .7) !important;
+}
+
+.cover-heading i {
+  color: $blue-color;
+}
+.mindful-news {
+  margin: 20px;
+  .mindful-news--card {
+    background-color: rgba($beige-color, .5);
+    padding: 10px;
+
+    a {
+      color: $blue-color;
+    }
+  }
 }
 #background, #background-video {
   position: fixed;
@@ -262,6 +281,6 @@ body {
   .masthead,
   .mastfoot,
   .cover-container {
-    width: 55rem;
+    width: 65rem;
   }
 }

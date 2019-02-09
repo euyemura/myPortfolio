@@ -49,6 +49,10 @@ module ApplicationHelper
         title: 'Contact'
       },
       {
+        url: mindful_news_path,
+        title: 'Mindfulness'
+      },
+      {
         url: blogs_path,
         title: 'Blog'
       },
