@@ -9,13 +9,6 @@ class Blog < ApplicationRecord
 
   has_many :comments, dependent: :destroy
 
-  def self.special_blogs
-    all
-  end
-
-  def self.featured_blogs
-    limit(2)
-  end
 
   def self.published_blogs current_user, params
     if current_user.roles[0] == :site_admin
@@ -23,5 +16,9 @@ class Blog < ApplicationRecord
     else
       page(params[:page]).per(5).where("status = '1'").order(created_at: :desc)
     end
+  end
+
+  def self.find_by_topic topic_id
+    where(topic_id: "#{topic_id}")
   end
 end
