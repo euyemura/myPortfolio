@@ -16,4 +16,12 @@ class Blog < ApplicationRecord
   def self.featured_blogs
     limit(2)
   end
+
+  def self.published_blogs current_user, params
+    if current_user.roles[0] == :site_admin
+      page(params[:page]).per(5).order(created_at: :desc)
+    else
+      page(params[:page]).per(5).where("status = '1'").order(created_at: :desc)
+    end
+  end
 end

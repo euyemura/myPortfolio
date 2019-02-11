@@ -7,7 +7,7 @@ class BlogsController < ApplicationController
   # GET /blogs
   # GET /blogs.json
   def index
-    @blogs = Blog.page(params[:page]).per(5).order(created_at: :desc)
+    @blogs = Blog.published_blogs current_user, params
     @page_title = "Blog | Eric Akio"
     @seo_keywords = "Eric Uyemura portfolio blog"
   end
