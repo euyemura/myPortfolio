@@ -1,11 +1,11 @@
 class TopicsController < ApplicationController
-
+layout "blog"
   def index
     @topics = Topic.all
   end
 
   def show
-    @topic = Topic.find(params[:id])
+    @topics = Topic.find(params[:id]).blogs
   end
 
   def topic_params
