@@ -22,7 +22,7 @@ class BlogsController < ApplicationController
       @seo_keywords = @blog.body
     else
       redirect_to blogs_path, notice: "This page is for admins only!"
-    end 
+    end
   end
 
   # GET /blogs/new
@@ -44,7 +44,6 @@ class BlogsController < ApplicationController
   # POST /blogs.json
   def create
     @blog = Blog.new(blog_params)
-
     respond_to do |format|
       if @blog.save
         format.html { redirect_to @blog, notice: 'Blog created! =)' }
