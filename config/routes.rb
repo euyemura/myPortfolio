@@ -10,8 +10,7 @@ Rails.application.routes.draw do
   get 'about-me', to: 'pages#about'
   get 'contact', to: 'pages#contact'
   get 'mindful-news', to: 'pages#mindful_news'
-  get 'topics' => 'topics#index'
-  get 'topics/:id' => 'topics#show'
+  resources :topics, only: [:index, :show]
 
   resources :blogs do
     member do

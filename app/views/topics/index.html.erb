@@ -1,5 +1,7 @@
-<ul>
-<% @topics.each do |topic| %>
-<li><%= link_to topic.title, "/topics/#{topic.id}"  %></li>
-<% end %>
-</ul>
+<div class="col-sm-8 blog-main">
+
+  <h1>Topics</h1>
+
+  <%= render @topics %>
+
+</div>

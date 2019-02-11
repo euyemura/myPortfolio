@@ -1,7 +1,8 @@
 <div class="blog-header">
   <div class="container">
     <a href="<%= blogs_path %>"<h1 class="blog-title">My Blog</h1></a>
-    <p class="lead blog-description">An example blog template built with Bootstrap.</p>
+    <p class="lead blog-description">Coding and Mindfulness</p>
     <%= link_to 'New Blog', new_blog_path  if logged_in?(:site_admin)%>
+    <%= link_to "All Topics", topics_path %>
   </div>
 </div>

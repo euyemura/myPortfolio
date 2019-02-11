@@ -5,7 +5,8 @@ layout "blog"
   end
 
   def show
-    @topics = Topic.find(params[:id]).blogs
+    @topic = Topic.find(params[:id])
+    @blogs = @topic.blogs.published_blogs current_user, params
   end
 
   def topic_params
