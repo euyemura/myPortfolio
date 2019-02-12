@@ -9,6 +9,7 @@ class BlogsController < ApplicationController
   # GET /blogs.json
   def index
     @blogs = Blog.published_blogs current_user, params
+    @topics = Topic.all
     @page_title = "Blog | Eric Akio"
     @seo_keywords = "Eric Uyemura portfolio blog"
   end

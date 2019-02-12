@@ -7,5 +7,5 @@
   <%= link_to "Edit", edit_blog_path(blog)%> |
   <%= link_to 'Delete Post', blog, method: :delete, data: { confirm: 'Are you sure?' }%>
   <% end %>
-  <p><%= blog.body %></p>
+  <p><%= markdown(blog.body) %></p>
 </div><!-- /.blog-post -->
