@@ -1,0 +1,11 @@
+<% if logged_in?(:site_admin) %>
+
+  <nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item"><%= link_to fa_icon('file-text'), toggle_status_blog_path(blog), style: blog_status_color(blog)%></li>
+        <li class="breadcrumb-item"><%= link_to fa_icon('pencil-square-o'), edit_blog_path(blog) %></li>
+        <li class="breadcrumb-item"><%= link_to fa_icon('trash'), blog, method: :delete, data: { confirm: "Are you sure you want to delete this post" } %></li>
+    </ol>
+  </nav>
+
+<% end %>
