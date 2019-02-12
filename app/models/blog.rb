@@ -17,8 +17,4 @@ class Blog < ApplicationRecord
       page(params[:page]).per(5).where("status = '1'").order(created_at: :desc)
     end
   end
-
-  def self.find_by_topic topic_id
-    where(topic_id: "#{topic_id}")
-  end
 end

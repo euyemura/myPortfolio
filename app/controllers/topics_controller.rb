@@ -1,7 +1,8 @@
 class TopicsController < ApplicationController
-layout "blog"
+  before_action :set_sidebar_topics
+  layout "blog"
   def index
-    @topics = Topic.all
+    @topics = Topic.has_blogs
   end
 
   def show
@@ -12,4 +13,11 @@ layout "blog"
   def topic_params
     params.require(:portfolio).permit(:title)
   end
+
+  private
+
+  def set_sidebar_topics
+    @side_bar_topics = Topic.has_blogs
+  end
+
 end
