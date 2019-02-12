@@ -1,9 +1,12 @@
-<div class="masthead clearfix">
-  <div class="inner">
-    <a href="<%= root_path %>"><h3 class="masthead-brand">Eric Uyemura</h3></a>
-    <nav class="navbar navbar-collapse  nav-masthead">
-      <%= nav_helper("nav-link nav-links", "span") %>
-      <%= login_helper("nav-link") %>
-    </nav>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark custom-navbar fixed-top">
+  <a href="<%= root_path %>"><h3 class="navbar-brand">Eric Uyemura</h3></a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav">
+      <%= nav_helper("nav-link nav-links", "li") %>
+      <li class="login-links"><%= login_helper("nav-link nav-links") %><li>
+    </ul>
   </div>
-</div>
+</nav>
