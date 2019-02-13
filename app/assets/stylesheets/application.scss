@@ -8,6 +8,7 @@
 
 $beige-color: #FFCC99;
 $blue-color: #4286F4;
+$dark-blue-color: #04395E;
 
 /* Links */
 a,
@@ -166,6 +167,11 @@ body {
     }
   }
 }
+
+
+.header-text {
+    color: $dark-blue-color;
+}
 #background, #background-video {
   position: fixed;
   top: 0;
@@ -183,19 +189,20 @@ body {
   display: none;
 }
 
+.site-wrapper-inner {
+  padding-top: 50px;
+}
 
 body .custom-navbar.navbar.navbar-expand-lg {
-  background-color: #04395E !important;
-
+  background-color: $dark-blue-color !important;
+  padding-left: 10%;
+  padding-right: 10%;
 }
 @media screen and (min-width: 1000px) {
   #background-video {
     display: block;
   }
   body .custom-navbar.navbar.navbar-expand-lg {
-    padding-left: 10%;
-    padding-right: 10%;
-    background-color: #04395E !important;
     .login-links {
       display: flex;
     }
