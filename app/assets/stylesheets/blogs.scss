@@ -5,6 +5,9 @@
  * Globals
  */
 
+$gray-color: #EEE;
+$platinum-color: #E5EEDF;
+
 @media (min-width: 48em) {
   html {
     font-size: 18px;
@@ -144,6 +147,34 @@ h6, .h6 {
     span {
       font-weight: bold;
     }
+  }
+}
+.blog-header {
+  padding-top: 70px;
+}
+
+.navbar-collapse a {
+  text-align: center;
+}
+body .custom-navbar.navbar.navbar-expand-lg {
+  background-color: $gray-color !important;
+  padding-left: 10%;
+  padding-right: 10%;
+}
+@media screen and (min-width: 1000px) {
+  #background-video {
+    display: block;
+  }
+  body .custom-navbar.navbar.navbar-expand-lg {
+    .login-links {
+      display: flex;
+    }
+    div {
+      justify-content: flex-end;
+    }
+  }
+  .blog-header {
+    padding-top: 80px;
   }
 }
 
