@@ -10,9 +10,36 @@
           <p class="lead">Hello my name is Eric Uyemura!  I began coding in June of 2018. Ever since I made my first HTML page I've been addicted to learning more and more.  I never thought I would make so much progress in just 6 months, but I know this is just the beginning.  My passion is in full stack development, I especially love Rails and React, but am constantly trying to learn new languages, frameworks, and libraries.  I also love typing furiously into the terminal and feeling like an operator in the Matrix.</p>
           <p class="lead">One of my favorite books is, "Zen Mind Beginner's Mind", by Shunryu Suzuki, it advises to always take the mindset of a beginner, to never be above learning more.  This is easy for me as a beginner, but I plan on taking this attitude with me in all avenues.</p>
         </div>
-        <p class="lead lead--button">
-          <%= link_to "Contact", contact_path, class: "btn btn-lg btn-secondary" %>
-        </p>
+        <div class="lead--buttons">
+          <p class="lead lead--button">
+            <%= link_to "Contact Me", contact_path, class: "btn btn-lg btn-secondary" %>
+          </p>
+          <p class="lead lead--button">
+            <%= link_to fa_icon("file-pdf-o", text: "My Resume", right: true), '/EUResumePort.doc.pdf', class: "btn btn-lg btn-secondary header-text", target: '_blank' %>
+          </p>
+        </div>
       </div>
+  </div>
+</div>
+
+<div class="app-card-container">
+  <div class="card">
+    <h1>Skills</h1>
+    <div class="skills">
+      <% @skills.each do |skill| %>
+      <div class="skill">
+        <h4><%= skill.title %></h4>
+        <div class="progress">
+          <div
+          class="progress-bar progress-bar-striped bg-warning"
+          role="progressbar"
+          aria-valuenow="<%= skill.percent_utilized %>"
+          aria-valuemax="100"
+          style="width: <%= skill.percent_utilized %>%"
+          ></div>
+        </div>
+      </div>
+      <% end %>
+    </div>
   </div>
 </div>

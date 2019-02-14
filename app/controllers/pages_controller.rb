@@ -4,10 +4,10 @@ class PagesController < ApplicationController
     # right here we are sending all of the blog posts over to our home page, incredible.
     # this blog data is available within any of these pages, we just have to call it, in other words, we have to make a database query.
     # we're essentially showing how to get data out of one controller, model, and view to another set of them, all within the same application which is pretty awesome.
-    @skills = Skill.all
   end
 
   def about
+    @skills = Skill.all
   end
 
   def contact

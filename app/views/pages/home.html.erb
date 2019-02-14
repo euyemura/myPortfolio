@@ -1,16 +1,40 @@
 
 <div class="inner cover">
-
-  <!-- <div class="star star-1">
-</div> -->
-
-<!-- <div class="moon">
-</div> -->
     <div class="header-container">
       <h1 class="cover-heading">Welcome to My Portfolio!</h1>
-      <p class="lead">Thanks for stopping by! Grab a drink and feel free to check out my projects!</p>
-      <p class="lead">
-        <%= link_to "My Projects", portfolios_path, class: "btn btn-lg btn-secondary header-text" %>
-      </p>
+      <p class="lead">Thanks for stopping by! Grab a drink and check out my site!</p>
+
+      <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <p class="lead">
+              <%= link_to "My Projects", portfolios_path, class: "btn btn-lg btn-secondary header-text" %>
+            </p>
+          </div>
+          <div class="carousel-item">
+            <p class="lead">
+              <%= link_to fa_icon("file-pdf-o", text: "My Resume", right: true), '/EUResumePort.doc.pdf', class: "btn btn-lg btn-secondary header-text", target: '_blank' %>
+            </p>
+          </div>
+          <div class="carousel-item">
+            <p class="lead">
+              <%= link_to "About Me", about_me_path, class: "btn btn-lg btn-secondary header-text" %>
+            </p>
+          </div>
+          <div class="carousel-item">
+            <p class="lead">
+              <%= link_to "Contact Me", contact_path, class: "btn btn-lg btn-secondary header-text" %>
+            </p>
+          </div>
+        </div>
+        <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+        </a>
+      </div>
     </div>
 </div>
