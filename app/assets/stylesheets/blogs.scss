@@ -7,6 +7,9 @@
 
 $gray-color: #EEE;
 $platinum-color: #E5EEDF;
+$dark-blue-color: #04395E;
+
+
 
 @media (min-width: 48em) {
   html {
@@ -15,8 +18,9 @@ $platinum-color: #E5EEDF;
 }
 
 body {
-  font-family: Georgia, "Times New Roman", Times, serif;
+  font-family: 'Roboto', sans-serif;
   color: #555;
+  background-color: $gray-color;
 }
 
 h1, .h1,
@@ -25,12 +29,14 @@ h3, .h3,
 h4, .h4,
 h5, .h5,
 h6, .h6 {
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: 'Lora', serif;
   font-weight: normal;
-  color: #333;
 }
 
+a {
+  color: lighten($dark-blue-color, 20%);
 
+}
 /*
  * Override Bootstrap's default container.
  */
@@ -91,6 +97,7 @@ h6, .h6 {
   padding-bottom: 1.25rem;
   margin-bottom: 2rem;
   border-bottom: .05rem solid #eee;
+  padding-top: 20px;
 }
 .blog-title {
   margin-bottom: 0;
@@ -150,14 +157,14 @@ h6, .h6 {
   }
 }
 .blog-header {
-  padding-top: 70px;
+  padding-top: 90px;
 }
 
 .navbar-collapse a {
   text-align: center;
 }
 body .custom-navbar.navbar.navbar-expand-lg {
-  background-color: $gray-color !important;
+  background-color: darken($gray-color, 15%) !important;
   padding-left: 10%;
   padding-right: 10%;
 }
@@ -174,7 +181,7 @@ body .custom-navbar.navbar.navbar-expand-lg {
     }
   }
   .blog-header {
-    padding-top: 80px;
+    padding-top: 100px;
   }
 }
 
@@ -196,7 +203,7 @@ body .custom-navbar.navbar.navbar-expand-lg {
 /*
  * Blog posts
  */
-
+Roboto
 .blog-post {
   margin-bottom: 4rem;
 }
@@ -218,7 +225,7 @@ body .custom-navbar.navbar.navbar-expand-lg {
   padding: 2.5rem 0;
   color: #999;
   text-align: center;
-  background-color: #f9f9f9;
+  background-color: $gray-color;
   border-top: .05rem solid #e5e5e5;
   margin-top: 20px;
 }
