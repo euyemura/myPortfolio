@@ -5,7 +5,7 @@ class Portfolio < ApplicationRecord
                                 allow_destroy: true,
                                 reject_if: lambda { |attrs| attrs['name'].blank? }
 
-  validates_presence_of :title, :body
+  validates_presence_of :title, :body, :git_link, :live_link
 
   mount_uploader :thumb_image, PortfolioUploader
   mount_uploader :main_image, PortfolioUploader

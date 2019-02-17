@@ -4,7 +4,7 @@ ready = ->
       'Thanks for stopping by!'
       "Grab a drink and check out my site!"
     ]
-    typeSpeed: 0
+    typeSpeed: 40
   return
 
 $(document).ready ready

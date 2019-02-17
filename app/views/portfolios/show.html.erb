@@ -11,7 +11,11 @@
       <em><h3><%= @portfolio_item.subtitle %></h3></em>
 
       <p><%= @portfolio_item.body %></p>
+      <hr>
 
+      <h4>Links</h4>
+      <p><b>Github:</b> <%= link_to @portfolio_item.git_link, "#{@portfolio_item.git_link}", target: "_blank"%></p>
+      <p><b>Live:</b> <%= link_to @portfolio_item.live_link, "#{@portfolio_item.live_link}", target: "_blank" %></p>
       <hr>
 
       <h4>Technologies Used:</h4>

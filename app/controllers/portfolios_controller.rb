@@ -79,6 +79,8 @@ private
                                       :body,
                                       :main_image,
                                       :thumb_image,
+                                      :git_link,
+                                      :live_link,
                                       technologies_attributes: [:id, :name, :_destroy]
                                     )
   end
